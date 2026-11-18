@@ -1,3 +1,4 @@
+import streamlit as st
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -31,7 +32,7 @@ plt.title("Regresi Linear Jam Belajar dan Nilai Ujian")
 plt.legend()
 plt.grid()
 
-plt.show()
+st.pyplot(plt)
 
 # Menghitung nilai prediksi seluruh data
 y_prediksi = a * x + b
@@ -45,6 +46,6 @@ jumlah_galat = np.sum(residual)
 # Menghitung jumlah kuadrat galat
 jumlah_kuadrat_galat = np.sum(residual**2)
 
-print("Residual:", residual)
+st.write("Residual:", residual)
 print("Jumlah galat:", jumlah_galat)
 print("Jumlah kuadrat galat:", jumlah_kuadrat_galat)
